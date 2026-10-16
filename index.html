@@ -909,6 +909,33 @@
             line-height: 1.8;
         }
 
+        .ending-confession {
+            max-width: 820px;
+            margin: 24px auto 0;
+            padding: 24px 26px;
+            border-radius: 24px;
+            color: rgba(255, 247, 251, 0.92);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(181, 140, 255, 0.14),
+                    rgba(255, 94, 168, 0.10)
+                );
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow:
+                0 18px 45px
+                rgba(0, 0, 0, 0.18);
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            line-height: 1.9;
+            text-align: left;
+        }
+
+        .ending-confession::first-letter {
+            color: var(--pink-soft);
+            font-size: 1.35em;
+            font-weight: 900;
+        }
+
         .ending-signature {
             display: inline-flex;
             align-items: center;
@@ -2363,6 +2390,25 @@
                             había algo que esta página sí tenía claro.
                         </p>
 
+                        <p
+                            class="ending-confession"
+                            id="endingConfession"
+                        >
+                            Te amo porque me haces muy feliz, porque no puedo mirarte y no sentir cosas en mi pecho,
+                            pero cosas, cosas muy lindas. Me recuerdas al morado, porque es mi color favorito,
+                            y también el tuyo, y siempre que miro o me pongo algo morado pienso en ti.
+                            Me gusta estar cerca de ti por tu olor, me gustan tus ojos, que me mires,
+                            que hagas tus caras, y poder mirarte mientras las haces, no lo sé, me encanta.
+                            Y me encanta tu voz, enserio enserio. Me gusta cuando hablas de cualquier cosa
+                            y yo igual quiero seguir escuchándote, aunque estés diciendo una bobada,
+                            porque hasta tus bobadas me gustan si vienen de ti.
+                            Y también me gusta que ahora muchas cosas pequeñas me recuerden a ti sin avisar:
+                            un color, una canción, un olor, una cara rara, una frase.
+                            Es como si te hubieras ido metiendo poquito a poquito en mis cosas favoritas,
+                            y pues qué hago, ya estás ahí.
+                            Te amo.
+                        </p>
+
                         <div class="ending-signature">
                             <span class="heart">♡</span>
                             <span id="endingSignature">
@@ -2508,8 +2554,9 @@
                         text:
                             "Aunque hay una silla enfrente, " +
                             "la otra persona se sienta a tu lado. " +
-                            "Dice que desde ahí se ven mejor las luces, " +
-                            "pero los dos saben que esa no es toda la razón.",
+                            "Dice que desde ahí se ven mejor las luces moradas, " +
+                            "pero la verdad es que desde tan cerca también notas su olor, " +
+                            "ese olor que después se queda dando vueltas en la cabeza sin pedir permiso.",
                         question:
                             "¿Te quedarías así de cerca en vez de cambiarte de asiento?",
                         yesText:
@@ -2529,8 +2576,8 @@
                         text:
                             "La conversación se vuelve más tranquila. " +
                             "Entre anécdotas aparece una pausa cómoda. " +
-                            "Entonces la otra persona pregunta: " +
-                            "“¿Tú siempre miras así o hoy tengo suerte?”.",
+                            "Entonces la otra persona te mira fijo, con esos ojos que hacen difícil fingir que no pasa nada, " +
+                            "y pregunta: “¿Tú siempre miras así o hoy tengo suerte?”.",
                         question:
                             "¿Responderías que hoy sí tiene suerte?",
                         yesText:
@@ -2569,9 +2616,9 @@
                         title: "Una canción demasiado específica",
                         text:
                             "Empieza una canción lenta. " +
-                            "La otra persona dice que no sabe bailar, " +
-                            "lo cual es exactamente lo que diría alguien que sí quiere bailar " +
-                            "pero necesita una excusa.",
+                            "La otra persona intenta cantar una parte bajito y su voz se mezcla con la música. " +
+                            "No canta perfecto, ni falta que hace, porque su voz sola ya te gusta demasiado. " +
+                            "Luego dice que no sabe bailar, que claramente es una excusa.",
                         question:
                             "¿Le ofrecerías tu mano para bailar de todos modos?",
                         yesText:
@@ -2591,7 +2638,8 @@
                         text:
                             "La canción termina, " +
                             "pero ninguno se separa enseguida. " +
-                            "Por un segundo la ciudad parece quedarse más silenciosa.",
+                            "La otra persona hace una de esas caras raras que hace cuando se pone nerviosa, " +
+                            "y tú te quedas mirándola un segundo de más porque, no lo sabes explicar, pero te encanta.",
                         question:
                             "¿Dirías “quédate un poquito más”?",
                         yesText:
@@ -2673,7 +2721,8 @@
                         text:
                             "La primera pregunta llega demasiado pronto: " +
                             "“¿Alguna vez has releído un mensaje mío solo porque te gustó cómo sonaba?”. " +
-                            "Qué manera tan poco sutil de empezar.",
+                            "Y la verdad es que sí, sobre todo cuando recuerdas su voz diciendo cosas simples " +
+                            "que por alguna razón te gustan muchísimo más de lo normal.",
                         question:
                             "¿Admitirías que sí, aunque sea una vez?",
                         yesText:
@@ -2693,7 +2742,8 @@
                         text:
                             "Al llegar a una avenida, " +
                             "la otra persona estira la mano como si fuera lo más normal del mundo. " +
-                            "No dice nada. Solo espera.",
+                            "Lleva algo morado, una tontería mínima que te hace pensar que ya asocias ese color con ella " +
+                            "más de lo que quieres admitir. No dice nada. Solo espera.",
                         question:
                             "¿Le tomarías la mano para cruzar?",
                         yesText:
@@ -2733,7 +2783,8 @@
                         text:
                             "Se detienen frente a una vitrina iluminada. " +
                             "La otra persona saca el teléfono y propone una foto. " +
-                            "Sale un poco borrosa, pero los dos se ven demasiado felices para repetirla.",
+                            "Justo cuando la toman hace una de sus caras, esa expresión que te da risa y que igual quieres guardar. " +
+                            "Sale borrosa, pero se ven demasiado felices para repetirla.",
                         question:
                             "¿La guardarías aunque no sea una foto perfecta?",
                         yesText:
@@ -2752,6 +2803,7 @@
                         title: "La última cuadra",
                         text:
                             "Queda una cuadra antes de despedirse. " +
+                            "Caminan tan cerca que vuelve ese olor suyo que ya reconoces sin tener que pensarlo. " +
                             "La conversación baja de volumen, " +
                             "como si ninguno quisiera ser quien anuncie que la noche terminó.",
                         question:
@@ -2855,8 +2907,9 @@
                         title: "Intento número dos",
                         text:
                             "Como el humor no basta, cambia de estrategia. " +
-                            "Te muestra una playlist titulada con una frase que tú dijiste hace semanas. " +
-                            "Eso significa que la recordó.",
+                            "Te muestra una playlist titulada con una frase que tú dijiste hace semanas " +
+                            "y una portada morada porque sabe que es tu color favorito... y también el suyo. " +
+                            "Eso significa que la recordó. Y peor: la pensó.",
                         question:
                             "¿Eso te parecería un poco tierno?",
                         yesText:
@@ -2876,7 +2929,8 @@
                         text:
                             "La otra persona te mira y dice: " +
                             "“Creo que me estás dejando ganar”. " +
-                            "No hay pruebas, pero el tono tiene demasiada confianza.",
+                            "Mientras lo dice hace una de esas caras que te desarman y encima intenta mantener la voz seria. " +
+                            "No le sale. A ti tampoco te sale mirar hacia otro lado.",
                         question:
                             "¿Responderías “tal vez” solo para ponerlo nervioso?",
                         yesText:
@@ -2896,7 +2950,8 @@
                         text:
                             "De repente el juego baja el ritmo. " +
                             "La otra persona admite que la apuesta era solo una excusa " +
-                            "para pasar tiempo contigo sin tener que decir que quería pasar tiempo contigo.",
+                            "para pasar tiempo contigo sin tener que decir que quería pasar tiempo contigo. " +
+                            "Está tan cerca que reconoces su olor y por alguna razón eso te calma más de lo que debería.",
                         question:
                             "¿Le dirías que no necesitaba ninguna excusa?",
                         yesText:
@@ -2916,7 +2971,8 @@
                         text:
                             "Ahora tú propones una condición: " +
                             "si va a hacer esa última pregunta, tiene que responder primero una tuya. " +
-                            "La otra persona acepta sin saber qué viene.",
+                            "La otra persona acepta sin saber qué viene y te mira fijo. " +
+                            "Es difícil pensar en la pregunta cuando te gustan tanto sus ojos.",
                         question:
                             "¿Preguntarías “te gusto de verdad?”",
                         yesText:
@@ -2958,30 +3014,29 @@
         const endingCopy = {
             lights: {
                 text:
-                    "Las luces podían apagarse, la música podía terminar " +
-                    "y la noche podía convertirse en recuerdo. " +
-                    "Pero entre todas las cosas que podían cambiar, " +
-                    "había una que llevaba rato esperando salir: te amo.",
+                    "Al final entendí que no eran las luces, ni la música, ni la noche. " +
+                    "Eras tú. Eran tus ojos cuando me mirabas, tu voz mezclándose con la canción, " +
+                    "esas caras tuyas que me dan demasiada risa y también el morado apareciendo por todas partes " +
+                    "como si hasta el color quisiera recordarme a ti.",
                 signature:
                     "firmado desde la ruta de las luces"
             },
 
             city: {
                 text:
-                    "La caminata llegó a su última cuadra, " +
-                    "pero hay frases que no deberían quedarse a mitad de camino. " +
-                    "Entre cafés, preguntas y pasos más lentos de lo necesario, " +
-                    "la verdad era esta: te amo.",
+                    "Al final no era la caminata, ni el café, ni la foto borrosa. " +
+                    "Era ir cerca de ti, reconocer tu olor, ver tus caras en una foto que ni siquiera quedó perfecta, " +
+                    "escuchar tu voz mientras caminábamos y encontrar morado por ahí y pensar en ti sin querer.",
                 signature:
                     "firmado desde una caminata que no quería terminar"
             },
 
             challenge: {
                 text:
-                    "La apuesta se acabó hace rato. " +
-                    "Ya no importa quién sonrió primero, quién perdió a propósito " +
-                    "o quién fingió que no estaba cayendo. " +
-                    "La única respuesta que importaba era esta: te amo.",
+                    "Al final la apuesta era lo de menos. " +
+                    "Lo que importaba era verte hacer tus caras, escucharte intentando hablar serio, " +
+                    "mirarte a los ojos, tenerte cerca, reconocer tu olor y ver morado y pensar en ti " +
+                    "como si mi cabeza ya hubiera decidido asociarte con todas las cosas que me gustan.",
                 signature:
                     "firmado por alguien que perdió la apuesta felizmente"
             }
@@ -3609,11 +3664,27 @@
                     gameState.route
                 ];
 
+            const confession =
+                "Te amo porque me haces muy feliz, porque no puedo mirarte y no sentir cosas en mi pecho, " +
+                "pero cosas, cosas muy lindas. Me recuerdas al morado, porque es mi color favorito, " +
+                "y también el tuyo, y siempre que miro o me pongo algo morado pienso en ti. " +
+                "Me gusta estar cerca de ti por tu olor, me gustan tus ojos, que me mires, " +
+                "que hagas tus caras, y poder mirarte mientras las haces, no lo sé, me encanta. " +
+                "Y me encanta tu voz, enserio enserio. Me gusta cuando hablas de cualquier cosa " +
+                "y yo igual quiero seguir escuchándote, aunque estés diciendo una bobada, " +
+                "porque hasta tus bobadas me gustan si vienen de ti. " +
+                "Y también me gusta que ahora muchas cosas pequeñas me recuerden a ti sin avisar: " +
+                "un color, una canción, un olor, una cara rara, una frase. " +
+                "Es como si te hubieras ido metiendo poquito a poquito en mis cosas favoritas, " +
+                "y pues qué hago, ya estás ahí. Te amo.";
+
             const message =
                 "Te amo, " +
                 name +
                 ". " +
-                routeEnding.text;
+                routeEnding.text +
+                " " +
+                confession;
 
             try {
                 await navigator.clipboard.writeText(
